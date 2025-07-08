@@ -25,7 +25,6 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@radix-ui/themes": "^3.2.1",
     "@syf/syf-ui": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

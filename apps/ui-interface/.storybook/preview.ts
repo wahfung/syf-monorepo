@@ -1,5 +1,5 @@
-import type { Preview } from '@storybook/react';
-import '@radix-ui/themes/styles.css';
+import type { Preview } from "@storybook/react";
+import "@syf/syf-ui/dist/index.css";
 
 const preview: Preview = {
   parameters: {
@@ -9,7 +9,7 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-  }
+  },
 };
 
 export default preview;

@@ -14,9 +14,6 @@ importers:
 
   apps/ui-interface:
     dependencies:
-      '@radix-ui/themes':
-        specifier: ^3.2.1
-        version: 3.2.1(@types/react-dom@18.3.7(@types/react@18.3.23))(@types/react@18.3.23)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@syf/syf-ui':
         specifier: workspace:*
         version: link:../../packages/syf-ui

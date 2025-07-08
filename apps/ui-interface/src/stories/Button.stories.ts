@@ -1,21 +1,28 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '@syf/syf-ui';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Button } from "@syf/syf-ui";
 
 const meta: Meta<typeof Button> = {
-  title: 'UI/Button',
+  title: "UI/Button",
   component: Button,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   argTypes: {
     variant: {
-      control: { type: 'select' },
-      options: ['default', 'destructive', 'outline', 'secondary', 'ghost', 'link'],
+      control: { type: "select" },
+      options: [
+        "default",
+        "destructive",
+        "outline",
+        "secondary",
+        "ghost",
+        "link",
+      ],
     },
     size: {
-      control: { type: 'select' },
-      options: ['default', 'sm', 'lg', 'icon'],
+      control: { type: "select" },
+      options: ["default", "sm", "lg", "icon"],
     },
   },
 };
@@ -25,21 +32,20 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: 'Button',
+    children: "Button",
   },
 };
 
-
 export const Small: Story = {
   args: {
-    size: 'sm',
-    children: 'Button',
+    size: "sm",
+    children: "Button",
   },
 };
 
 export const Icon: Story = {
   args: {
-    size: 'icon',
-    children: '🔥',
+    size: "icon",
+    children: "🔥",
   },
 };
