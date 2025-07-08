@@ -36,16 +36,3 @@ export const Default: Story = {
   },
 };
 
-export const Small: Story = {
-  args: {
-    size: "sm",
-    children: "Button",
-  },
-};
-
-export const Icon: Story = {
-  args: {
-    size: "icon",
-    children: "🔥",
-  },
-};
