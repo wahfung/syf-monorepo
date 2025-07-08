@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import { Button as RadixButton } from "@radix-ui/themes";
-import { cn } from "./utils/cn";
+import { cn } from "../utils/cn";
 
 // 映射自定义 variant 到 Radix UI Button variants
 const mapVariantToRadix = (variant?: string) => {
@@ -51,14 +51,32 @@ const getColorFromVariant = (variant?: string) => {
 };
 
 export interface ButtonProps
-  extends Omit<React.ComponentPropsWithoutRef<typeof RadixButton>, "variant" | "size" | "color"> {
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+  extends Omit<
+    React.ComponentPropsWithoutRef<typeof RadixButton>,
+    "variant" | "size" | "color"
+  > {
+  variant?:
+    | "default"
+    | "destructive"
+    | "outline"
+    | "secondary"
+    | "ghost"
+    | "link";
   size?: "default" | "sm" | "lg" | "icon";
   asChild?: boolean;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = "default", size = "default", asChild = false, ...props }, ref) => {
+  (
+    {
+      className,
+      variant = "default",
+      size = "default",
+      asChild = false,
+      ...props
+    },
+    ref
+  ) => {
     const additionalClasses = cn(
       variant === "link" && "underline-offset-4 hover:underline",
       variant === "icon" && "aspect-square",
