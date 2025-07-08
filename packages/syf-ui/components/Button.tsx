@@ -1,6 +1,7 @@
 import React, { forwardRef } from "react";
 import { Button as RadixButton } from "@radix-ui/themes";
 import { cn } from "../utils/cn";
+import { ThemeProvider } from "../providers/ThemeProvider";
 
 // 映射自定义 variant 到 Radix UI Button variants
 const mapVariantToRadix = (variant?: string) => {
@@ -84,14 +85,16 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     );
 
     return (
-      <RadixButton
-        variant={mapVariantToRadix(variant)}
-        size={mapSizeToRadix(size)}
-        color={getColorFromVariant(variant)}
-        className={additionalClasses}
-        ref={ref}
-        {...props}
-      />
+      <ThemeProvider>
+        <RadixButton
+          variant={mapVariantToRadix(variant)}
+          size={mapSizeToRadix(size)}
+          color={getColorFromVariant(variant)}
+          className={additionalClasses}
+          ref={ref}
+          {...props}
+        />
+      </ThemeProvider>
     );
   }
 );
