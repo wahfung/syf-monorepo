@@ -1,6 +1,6 @@
 {
   "name": "@syf/ui-interface",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Storybook interface for syf-ui components",
   "main": "index.js",
   "scripts": {
