@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS variables for Radix UI colors */
+:root {
+  --blackA4: rgba(0, 0, 0, 0.04);
+  --violet3: hsl(252, 100%, 97%);
+  --violet11: hsl(252, 56%, 57%);
+}
+
+/* Base styles for better component integration */
+* {
+  box-sizing: border-box;
+}
